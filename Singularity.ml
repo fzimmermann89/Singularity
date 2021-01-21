@@ -29,7 +29,7 @@ yum install -y axel binutils cmake curl diffutils elfutils environment-modules g
 
 #miniconda
 echo "installing miniconda"
-wget -q -O /tmp/Miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-py38_4.9.2-Linux-x86_64.sh
+wget -q -O /tmp/Miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-py37_4.9.2-Linux-x86_64.sh
 cd /tmp/&& bash /tmp/Miniconda3.sh -b -p /opt/anaconda3
 rm /tmp/Miniconda3.sh
 ln -s /opt/anaconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
@@ -40,7 +40,7 @@ PATH=$PATH:/usr/local/cuda/bin:/opt/anaconda3/bin
 . /etc/profile.d/conda.sh
 echo "installing conda extensions"
 conda activate
-conda install -q -y pillow tensorflow-gpu "numpy>1.18" hdf5 h5py colorama memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib
+conda install -q -y pillow tensorflow-gpu "numpy>1.18" hdf5 h5py colorama memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7"
 conda install -q -y pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 conda install -q -y -c  conda-forge -c plotly lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.1" jupyter-dash ipyvolume jupyter-server-proxy six openssl 
 conda clean -a -y &
