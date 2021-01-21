@@ -41,7 +41,7 @@ PATH=$PATH:/usr/local/cuda/bin:/opt/anaconda3/bin
 echo "installing conda extensions"
 conda activate
 conda install -q -y -c conda-forge mamba
-mamba install -q -y -c anaconda -c  conda-forge -c plotly -c pytorch pillow tensorflow-gpu "numpy>1.18" hdf5 h5py colorama memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7" pytorch torchvision torchaudio cudatoolkit=10.2 lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.1" jupyter-dash ipyvolume jupyter-server-proxy six openssl 
+mamba install -q -y -c anaconda -c  conda-forge -c plotly -c pytorch pillow tensorflow-gpu "numpy>1.18" hdf5 h5py colorama jupyterlab ipython memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7" pytorch torchvision torchaudio cudatoolkit=10.2 lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.1" jupyter-dash ipyvolume jupyter-server-proxy six openssl 
 conda clean -a -y &
 
 
