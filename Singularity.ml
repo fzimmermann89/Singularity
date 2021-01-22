@@ -58,7 +58,7 @@ jupyter labextension install @jupyterlab/google-drive --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install @jupyterlab/server-proxy --no-build
 
-pip install -q jupyterlab-git jupyterlab_code_formatter   jupyter-dash jupyter-tensorboard
+pip install -q jupyterlab-git jupyterlab_code_formatter   jupyter-dash jupyter-tensorboard "jupyterlab<3"
 jupyter labextension install @ryantam626/jupyterlab_code_formatter --no-build
 jupyter labextension install @jupyterlab/git --no-build
 jupyter labextension install @jupyterlab/debugger --no-build
