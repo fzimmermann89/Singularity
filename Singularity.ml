@@ -41,8 +41,8 @@ PATH=$PATH:/usr/local/cuda/bin:/opt/anaconda3/bin
 echo "installing conda extensions"
 conda activate
 conda install -q -y -c conda-forge mamba
-mamba install -q -y  pillow  seaborn "numpy>1.18" hdf5 h5py colorama "jupyterlab>=2.2.9,<3" ipython memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7" scikit-image
-mamba install -q -y -c pkgs -c pytorch -c nvidia -c conda-forge "pytorch>=1.4" "torchvision>=0.5" torchaudio cudatoolkit=10 "tensorflow-gpu>=2" cupy numba lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.3" jupyter-dash ipyvolume jupyter-server-proxy six openssl "jupyterlab>=2.2.9,<3"
+mamba install -q -y  pillow  seaborn "numpy>1.18" hdf5 h5py colorama "jupyterlab>=2.2.6,<3" ipython memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7" scikit-image
+mamba install -q -y -c pkgs -c pytorch -c nvidia -c conda-forge "pytorch>=1.4" "torchvision>=0.5" torchaudio cudatoolkit=10 "tensorflow-gpu>=2" cupy numba lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.3" jupyter-dash ipyvolume jupyter-server-proxy six openssl "jupyterlab>=2.2.6,<3"
 conda clean -a -y &
 
 
