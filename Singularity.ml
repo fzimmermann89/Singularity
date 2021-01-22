@@ -41,7 +41,8 @@ PATH=$PATH:/usr/local/cuda/bin:/opt/anaconda3/bin
 echo "installing conda extensions"
 conda activate
 conda install -q -y -c conda-forge mamba
-mamba install -q -y -c anaconda -c  conda-forge -c plotly -c pytorch pillow tensorflow-gpu "numpy>1.18" hdf5 h5py colorama "jupyterlab=2.2" ipython memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7" pytorch torchvision torchaudio cudatoolkit=10.2 lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.1" jupyter-dash ipyvolume jupyter-server-proxy six openssl 
+mamba install -q -y  pillow  "numpy>1.18" hdf5 h5py colorama "jupyterlab=2.2" ipython memory_profiler isort mkl-devel fastrlock six setuptools scikit-learn scipy seaborn pandas line_profiler black matplotlib "python>=3.7" scikit-image
+mamba install -q -y -c pkgs -c pytorch -c nvidia -c conda-forge "pytorch>=1.4" "torchvision>=0.5" torchaudio cudatoolkit=10 "tensorflow-gpu>=2" cupy numba lmfit ipympl pathos "nodejs>=14"  ptvsd xeus-python pytools nbdime "pip>=20.1" jupyter-dash ipyvolume jupyter-server-proxy six openssl "jupyterlab<3"
 conda clean -a -y &
 
 
@@ -57,7 +58,7 @@ jupyter labextension install @jupyterlab/google-drive --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install @jupyterlab/server-proxy --no-build
 
-pip install -q --upgrade jupyterlab-git jupyterlab_code_formatter   jupyter-dash jupyter-tensorboard
+pip install -q jupyterlab-git jupyterlab_code_formatter   jupyter-dash jupyter-tensorboard
 jupyter labextension install @ryantam626/jupyterlab_code_formatter --no-build
 jupyter labextension install @jupyterlab/git --no-build
 jupyter labextension install @jupyterlab/debugger --no-build
@@ -96,8 +97,8 @@ EOF3
 
 
 #pip
-echo "installing pycuda from pip" && LIBRARY_PATH=/usr/local/cuda/lib64/stubs CPATH=/usr/local/cuda/include CUDA_ROOT=/usr/local/cuda pip install pycuda && \
-echo 'installing cupy from pip' && pip install cupy-cuda102  &
+#echo "installing pycuda from pip" && LIBRARY_PATH=/usr/local/cuda/lib64/stubs CPATH=/usr/local/cuda/include CUDA_ROOT=/usr/local/cuda pip install pycuda && \
+#echo 'installing cupy from pip' && pip install cupy-cuda101  &
 
 #conda config
 conda config  --file /opt/anaconda3/.condarc --set changeps1 False
